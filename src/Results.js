@@ -1,8 +1,11 @@
 import React from "react";
 
-export default function Results({ data }) {
-  if (data === null) {
-    return <div>search for jobs</div>;
+export default function Results({ data, loading }) {
+  if (loading === true) {
+    return <div>Loading...</div>;
+  }
+  if (!data) {
+    return <></>;
   }
   const jobCards = data.results.map((job, index) => {
     return (

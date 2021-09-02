@@ -157,6 +157,7 @@ input[type="text"]:focus {
   outline-width: 2px;
   outline-style: dashed;
   outline-offset: 1px;
+  font-style: normal;
 }
 
 input[type="submit"] {
@@ -179,6 +180,9 @@ input[type="submit"]:hover {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   cursor: pointer;
+  transform: translateY(2px);
+  box-shadow: 0.1em 0.1em 0 #0f1020;
+  transition: ease-in-out 0.1s;
 }
 
 @media screen and (max-width: 800px) {

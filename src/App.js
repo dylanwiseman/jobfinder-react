@@ -16,6 +16,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     let searchTerm = encodeURI(search);
     async function getJobs() {
@@ -26,7 +27,6 @@ function App() {
     }
     try {
       getJobs();
-      setLoading(true);
     } catch (error) {
       alert(error);
     } finally {
@@ -48,7 +48,7 @@ function App() {
         handleSubmit={handleSubmit}
         search={search}
       />
-      {loading === false ? <Results data={data} /> : <div>Finding Jobs...</div>}
+      <Results data={data} loading={loading} />
     </div>
   );
 }
