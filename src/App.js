@@ -8,14 +8,15 @@ import { adzunaConfig } from "./config";
 function App() {
   const [data, setData] = useState(null);
   const [search, setSearch] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     setSearch(event.target.value);
   };
 
   const handleSubmit = (e) => {
-    console.log("clicked!");
     e.preventDefault();
+
     let searchTerm = encodeURI(search);
     async function getJobs() {
       const { data } = await axios.get(
@@ -25,10 +26,12 @@ function App() {
     }
     try {
       getJobs();
+      setLoading(true);
     } catch (error) {
       alert(error);
     } finally {
       setSearch("");
+      setLoading(false);
     }
   };
 
@@ -36,15 +39,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>
-          <span>job</span>Finder
+          <span id="job">job</span>Finder
         </h1>
       </header>
       <Search
+        loading={loading}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         search={search}
       />
-      <Results data={data} />
+      {loading === false ? <Results data={data} /> : <div>Finding Jobs...</div>}
     </div>
   );
 }

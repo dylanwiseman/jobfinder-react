@@ -2,3 +2,187 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  color: #efc3f5;
+  background-color: #2f195f;
+}
+
+.jobCard {
+  width: 50%;
+  margin: 1em auto;
+  padding: 0.5em;
+  border: none;
+  background-color: #0f1020;
+  box-shadow: 0.2em 0.2em 0 #7353ba;
+  border-radius: 4px;
+}
+
+#job {
+  color: #ff0054;
+  font-style: italic;
+}
+
+header {
+  width: 60%;
+  margin: 2em auto;
+}
+
+#buttons {
+  width: 50%;
+  margin: 0 auto 2em auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: zenon, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  margin: 0em 1em 0em 0;
+  display: inline;
+}
+
+h3 {
+  font-family: zenon, sans-serif;
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
+h4 {
+  font-family: zenon, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  display: inline;
+}
+
+#sub-header {
+  display: inline;
+}
+p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-top: 0.6em;
+  border-top: dashed 2px #7353ba;
+  margin-top: 0.3em;
+}
+
+a {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #ff0054;
+  text-decoration: none;
+}
+a:hover {
+  letter-spacing: 0.1em;
+  transition: ease-in-out 0.4s;
+  color: #85002c;
+}
+
+button {
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -ms-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+  color: white;
+  background-color: #7353ba;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  padding: 0.2em 1em 0.2em 1em;
+  box-shadow: 0.2em 0.2em 0 #ff0054;
+  border-radius: 2px;
+  margin: 0 0.2em;
+}
+button:hover {
+  transform: translateY(2px);
+  background-color: #5a4091;
+  box-shadow: 0.2em 0.2em 0 #85002c;
+  color: lightgray;
+}
+#job-list {
+  margin-bottom: 1em;
+}
+
+@keyframes colors {
+  0% {
+    background-color: #ff0054;
+  }
+  20% {
+    background-color: #efc3f5;
+  }
+  40% {
+    background-color: orange;
+  }
+  60% {
+    background-color: #7353ba;
+  }
+  80% {
+    background-color: yellow;
+  }
+}
+
+#loading {
+  display: none;
+  text-align: center;
+  animation-name: colors;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+form {
+  text-align: center;
+}
+
+input[type="text"] {
+  background-color: #efc3f5;
+  border: none;
+  height: 1.5em;
+  margin: 1em;
+  border-radius: 2px;
+  color: #0f1020;
+  font-size: 1.2em;
+  padding: 0 0.1em;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input[type="text"]:focus {
+  outline-color: #ff0054;
+  outline-width: 2px;
+  outline-style: dashed;
+  outline-offset: 1px;
+}
+
+input[type="submit"] {
+  font-size: 1.2em;
+  background-color: #ff0054;
+  color: #0f1020;
+  font-family: zenon, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  display: inline;
+  border: none;
+  padding: 0.2em 1em 0.2em 1em;
+  box-shadow: 0.2em 0.2em 0 #0f1020;
+  border-radius: 2px;
+  margin: 0 0.2em;
+}
+
+input[type="submit"]:hover {
+  animation-name: colors;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .jobCard {
+    width: 92%;
+  }
+}
