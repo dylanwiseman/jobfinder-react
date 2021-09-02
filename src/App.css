@@ -185,6 +185,19 @@ input[type="submit"]:hover {
   transition: ease-in-out 0.1s;
 }
 
+.loadText {
+  text-align: center;
+  animation-name: colors;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  font-size: 3em;
+}
+
+.loadContainer {
+  margin-top: 2em;
+  text-align: center;
+}
+
 @media screen and (max-width: 800px) {
   .jobCard {
     width: 92%;

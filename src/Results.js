@@ -1,8 +1,12 @@
 import React from "react";
 
 export default function Results({ data, loading }) {
-  if (loading === true) {
-    return <div>Loading...</div>;
+  if (loading) {
+    return (
+      <div className="loadContainer">
+        <h4 className="loadText">Finding jobs...</h4>;
+      </div>
+    );
   }
   if (!data) {
     return <></>;
