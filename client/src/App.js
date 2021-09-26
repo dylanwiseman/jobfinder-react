@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Search from "./Search";
 import Results from "./Results";
-import { adzunaConfig } from "./config";
+// import { adzunaConfig } from "./config";
 require("dotenv").config();
 
 function App() {
